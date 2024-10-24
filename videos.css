@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    background-color: black;
+    padding: 20px;
+    color: white;
+}
+
+.wrapper { 
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-size: contain;
+    background-position: fixed;
+    object-fit: cover;
+    margin: 0 auto;
+    background-color: rgba(241, 241, 241, 0.1);
+    box-shadow: 0 0 10px 0 rgba(241, 241, 241, 0.5) inset,
+                0 2px 5px rgba(241, 241, 121, 0.5);
+    border: 1px solid rgba(241, 241, 241, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 5px 0 rgba(241, 241, 241, 0.5) inset,
+                0 5px 2px rgba(241, 241, 241, 0.5);
+    border: 1px solid rgba(241, 241, 241, 0.8);
+    backdrop-filter: blur(1px);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(241, 241, 241, 0.1);
+    box-shadow: 0 0 5px 0 rgba(241, 241, 241, 0.5) inset,
+                0 5px 2px rgba(241, 241, 241, 0.5);
+    border: 1px solid rgba(241, 241, 241, 0.8);
+    backdrop-filter: blur(15px);
+    color: white;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+input[type="text"]:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.2);
+    -webkit-text-stroke: 0.5px white;
+    text-shadow: 0px 2px 4px transparent;
+    font-size: 3em;
+    text-align: center;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.video-player {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.video-player:hover {
+    transform: scale(1.05);
+}
+
+.video-player img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    button, input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .video-container {
+        grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
+    }
+}
